@@ -83,7 +83,8 @@ const Footer = async () => {
               {globalConfig.archival.substring(0, 5) || ""}
             </span>
             <Link
-              href={"#"}
+              target="_blank"
+              href={"https://beian.miit.gov.cn/#/Integrated/index"}
               className={`${styles.badge_value} ${styles.bg_gray}`}
             >
               {globalConfig.archival.substring(5) || ""}
