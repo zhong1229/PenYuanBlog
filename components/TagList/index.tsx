@@ -15,15 +15,15 @@ const ColorList = [
   "#FFCA58",
 ];
 
-const TgaList = async ({ List }: { List: string[] }) => {
+const TgaList = async ({ List }: { List: any[] }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.boiled}>
-        {List.map((item: string) => (
+        {List.map((item: any) => (
           <Link
-            href={"/blog?tag=" + item}
+            href={"/blog?tag=" + item.name}
             className={styles.boiled_item}
-            key={item}
+            key={item.id}
           >
             <span
               className={styles.card_container}
@@ -31,7 +31,7 @@ const TgaList = async ({ List }: { List: string[] }) => {
                 background: `${ColorList[Math.floor(Math.random() * 10)]}`,
               }}
             >
-              {item}
+              {item.name}
             </span>
           </Link>
         ))}
