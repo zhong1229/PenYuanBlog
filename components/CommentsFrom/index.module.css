@@ -1,0 +1,157 @@
+.container {
+  margin: 24px 0;
+  position: relative;
+}
+
+.container .comment_form {
+  display: grid;
+  margin: 0.5rem 0 0;
+  grid:
+    "comment author"
+    "comment email"
+    "comment url"
+    "comment captcha"
+    "emoji submit" / 2fr 1fr;
+  gap: 14.4px 36px;
+}
+
+.container .comment_form label {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  height: 1rem;
+  display: block;
+}
+.container .comment_form input,
+.container .comment_form textarea {
+  border: 0;
+  vertical-align: middle;
+  outline: none;
+  width: 100%;
+  accent-color: #ee4d50cc;
+  background: #0000000d;
+  border-radius: 12px;
+  padding: 7px 14px;
+  line-height: 28.8px;
+  transition: 0.5s;
+}
+
+.container .comment_form input {
+  grid-area: input;
+}
+
+.container .comment_form .comment_form_comment {
+  grid-area: comment;
+}
+
+.container .comment_form .comment_form_comment textarea {
+  height: calc(100% - 1rem);
+  resize: none;
+}
+
+.container .comment_form .comment_form_author {
+  grid-area: author;
+}
+.container .comment_form .comment_form_email {
+  grid-area: email;
+}
+.container .comment_form .comment_form_url label,
+.container .comment_form .comment_form_url {
+  grid-area: url;
+}
+
+.container .comment_form .form_captcha {
+  grid-area: captcha;
+  display: grid;
+  column-gap: 0.5rem;
+  grid:
+    "url url"
+    "img input" / 1fr 2fr;
+}
+
+.container .comment_form .form_captcha .loaded {
+  height: 3em;
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid #eee;
+  grid-area: img;
+  cursor: pointer;
+}
+
+.container .comment_form .form_submit .submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  width: auto;
+  min-width: auto;
+  min-height: auto;
+  line-height: 1;
+  padding: 1em;
+  background: linear-gradient(135deg, #ee4d50cc, #fb9168cc);
+  box-shadow: 0 0 1rem 0 #ee4d5033, 0 0.5rem 1rem -0.5rem #ee4d5080;
+  border-radius: 12px;
+}
+
+.container .comment_form .form_submit {
+  grid-area: submit;
+  justify-self: end;
+}
+
+.emoji_btn {
+  grid-area: emoji;
+  user-select: none;
+  cursor: pointer;
+  place-self: center left;
+  font-size: 24px;
+}
+.emoji_icons {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  grid: auto / repeat(auto-fill, minmax(24px, 1fr));
+  width: calc(100% - 150px);
+  height: 40px;
+  right: 96px;
+  bottom: 0;
+  font-size: 24px;
+  line-height: 1;
+  gap: 24px;
+  padding: 12px;
+  z-index: 99;
+  overflow: hidden auto;
+  overscroll-behavior-y: contain;
+  transition: 0.3s, pointer-events 0s;
+  scroll-snap-type: y mandatory;
+}
+.emoji_icon {
+  scroll-snap-align: center;
+  user-select: none;
+  cursor: pointer;
+  content-visibility: auto;
+  transition: 0.3s;
+}
+.show {
+  opacity: 1;
+  filter: none;
+  width: 100%;
+  height: calc(100% - 38px);
+  right: 0;
+  bottom: 50px;
+  background: #ffffff80;
+  backdrop-filter: blur(10px);
+  scroll-snap-type: none;
+  box-shadow: 0 0.2rem 1rem 0 #2626261a;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .container .comment_form {
+    grid:
+      "comment comment comment"
+      "author email url"
+      "captcha captcha captcha"
+      "emoji submit submit" / 1fr 1fr 1fr;
+  }
+}

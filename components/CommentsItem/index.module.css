@@ -1,0 +1,120 @@
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  font-size: inherit;
+}
+
+.comment a {
+  transition: 0.7s;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ee4d5080, #fb916880) no-repeat left 100% /
+    0;
+}
+
+.comment a:not(.comment_reply_link):hover {
+  background: linear-gradient(90deg, #ee4d5080, #fb916880) no-repeat left 100% /
+    100% 1px;
+  color: #ee4d50cc;
+}
+
+.comment .comment_meta {
+  font-size: 12px;
+}
+
+.comment .user_meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.comment .user_meta .user_avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment .user_meta .user_avatar::before {
+  content: " ";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: url("/lv1.png") center / cover;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 2;
+  animation: rotate 15s linear infinite paused;
+}
+.comment .user_meta .cite {
+  color: #262626;
+}
+
+.comment .comment_content {
+  display: inline-block;
+  flex: 0 0 100%;
+  line-height: 2;
+}
+.comment .comment_content .reply {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+  text-shadow: 1px 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+
+.comment .comment_content .reply .comment_reply_link {
+  cursor: pointer;
+  color: #999;
+}
+
+.comment .children {
+  border-top: 1px dashed #2626261a;
+  font-size: 98%;
+}
+
+.comment .children .comment {
+  margin-top: 24px;
+}
+
+.comment .children .comment .user_meta .user_avatar .image {
+  width: 26px !important;
+  height: 26px !important;
+}
+
+.comment .children .comment .comment_content {
+  padding-left: 38.4px;
+}
+
+.comment .children .comment .comment_content .fn {
+  margin-right: 7px;
+}
+
+.image {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment_reply_title {
+  font-size: 15.6px;
+  color: #ee4d50;
+  white-space: nowrap;
+}
+
+.comment_reply_title a {
+  font-size: 75%;
+  font-size: 14.4px;
+  float: right;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}

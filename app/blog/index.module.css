@@ -1,0 +1,136 @@
+.Cover_container {
+  height: 500px;
+  position: relative;
+  background: url("/blogs.png") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate3d(0px, 0px, 0px);
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.Cover_container .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Cover_container .mask .banner_text {
+  color: #fff;
+  overflow-wrap: break-word;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  z-index: 1;
+  padding: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.Cover_container .mask .banner_text .icons {
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+.Cover_container .mask .banner_text span::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  opacity: 0.3;
+  vertical-align: 0.2em;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .filter_container {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+.container .filter_container .options_title {
+  padding: 5px 10px;
+  display: inline-block;
+  color: #4e5358;
+  position: relative;
+}
+
+.container .filter_container .options_title::after {
+  content: "";
+  width: 1px;
+  height: 1.1em;
+  position: absolute;
+  display: inline-block;
+  background: #4e5358;
+  right: -1px;
+  top: 50%;
+  opacity: 0.2;
+  transform: translateY(-50%);
+}
+
+.container .filter_container .option_list {
+  margin-left: 10px;
+  color: #999;
+}
+.container .filter_container .option_list a:not(:first-child)::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #4e5358;
+  opacity: 0.3;
+  vertical-align: 0.2em;
+}
+
+.container .filter_container .option_list .activeLink {
+  color: #089bee;
+  font-weight: 600;
+}
+
+.container .PostList {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  flex-direction: column;
+}
+.container .widget_title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  padding-bottom: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  .Cover_container {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cover_container {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Cover_container {
+    height: 192px;
+  }
+}

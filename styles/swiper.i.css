@@ -1,0 +1,74 @@
+:root {
+  --swiper-theme-color: #fff;
+  --swiper-navigation-size: initial;
+}
+
+.pagination_config-bullets {
+  right: 0;
+  bottom: 4px;
+  padding-right: 10px;
+  width: auto !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.pagination-bullet {
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.2;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.pagination_active {
+  width: 8px;
+  opacity: 1;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px;
+  height: 40px;
+  text-shadow: 0 0 6px #444;
+  visibility: hidden;
+  margin-top: -25px;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.swiper-button-prev {
+  left: -15px;
+}
+
+.swiper-button-next {
+  right: -15px;
+}
+
+.mySwiper:hover .swiper-button-next {
+  visibility: visible;
+  right: 0;
+  opacity: 0.8;
+}
+
+.mySwiper:hover .swiper-button-prev {
+  visibility: visible;
+  left: 0;
+  opacity: 0.8;
+}
+
+.mySwiper:hover .pagination_config-bullets {
+  visibility: visible;
+  opacity: 1;
+}

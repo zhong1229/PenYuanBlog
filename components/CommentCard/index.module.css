@@ -1,0 +1,72 @@
+.container {
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  break-inside: avoid;
+  transition: 0.3s;
+  color: var(--dark-color);
+}
+.author {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  flex: none;
+  text-transform: capitalize;
+  flex-direction: column;
+  margin: -2rem 0 0;
+}
+
+.author .imageContainer {
+  width: 2rem;
+  aspect-ratio: 1;
+  box-shadow: 0 0.2rem 1rem 0 hsl(0 100% 85% / 10%);
+  border: 1px dashed hsl(33, 5%, 63%);
+  border-radius: 50%;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.author .imageContainer .image {
+  object-fit: cover;
+}
+
+.author .comment_info {
+  display: flex;
+  gap: 1em;
+  margin: -0.5em 0;
+  align-items: center;
+}
+
+.author .comment_info h6 {
+  font-size: 0.65rem;
+}
+
+.timer {
+  opacity: 0.6;
+  font-size: 0.5rem;
+}
+
+.comment_text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 0.55rem;
+  height: 100%;
+  text-align: justify;
+  justify-content: space-between;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.comment_text .content {
+  /* opacity: 0.6;
+  font-size: 0.5rem; */
+  line-height: 1.7;
+}

@@ -1,0 +1,105 @@
+.container {
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 0 0 10px rgba(116, 116, 116, 0.08);
+  border-radius: 8px;
+  display: flex;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.container .aLink {
+  width: 190px;
+  height: 133px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.container .content {
+  width: calc(100% - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  padding-left: 20px;
+}
+
+.container .content .header .timer {
+  display: flex;
+  font-size: 0.5rem;
+  line-height: 1.8;
+}
+
+.container .content .header .title {
+  font-size: 0.65rem;
+  letter-spacing: 0.06rem;
+  font-weight: 600;
+  white-space: nowrap; /* 禁止换行 */
+  overflow: hidden; /* 隐藏溢出部分 */
+  text-overflow: ellipsis; /* 使用省略号表示文本溢出 */
+}
+.container .content .dec_container p {
+  font-size: 0.55rem;
+  letter-spacing: 0.06rem;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 设置显示的行数 */
+}
+.container .footer .mark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.5rem;
+  color: inherit;
+}
+
+.container .footer .mark .left {
+  display: flex;
+  gap: 5px;
+}
+
+.container .footer .mark .tag {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.container .footer .mark .tag_list {
+  text-align: right;
+  flex: auto;
+}
+
+.container .footer .mark .tag_list a {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.container .footer .mark .tag_list a:not(:last-child) {
+  margin: 0 0.5em 0 0;
+}
+.image {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 640px) {
+  .container .content .dec_container {
+    display: none;
+  }
+  .container .content .header .title {
+    font-weight: 500;
+  }
+  .container .aLink {
+    width: 138px;
+    height: 96px;
+  }
+
+  .container .content {
+    width: calc(100% - 138px);
+  }
+}

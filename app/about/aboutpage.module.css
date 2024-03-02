@@ -1,0 +1,397 @@
+.container {
+  /* display: flex; */
+}
+.container .Introduction {
+  display: flex;
+  height: 450px;
+}
+.container .Introduction > .left {
+  flex: 2;
+  margin-top: 68px;
+  position: relative;
+  line-height: 2;
+}
+
+.container .Introduction > .left .title {
+  font-size: 42px;
+  margin: 0.5rem 0;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  transition: 0.6s;
+}
+
+.container .Introduction > .left .describe {
+  font-size: 18px;
+  letter-spacing: 3.2px;
+  margin-top: 36px;
+  opacity: 0.9;
+}
+
+.container .Introduction > .left .describe_tips {
+  font-size: 16px;
+  opacity: 0.4;
+}
+
+.container .Introduction > .left .buttons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.container .Introduction > .left .buttons a {
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e3e8f7;
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  padding: 6px 18px;
+  transition: 0.6s;
+  margin-right: 16px;
+}
+
+.container .Introduction > .left .buttons a:hover {
+  background-color: skyblue;
+  color: white;
+}
+
+.container .Introduction > .right {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+.container .Introduction_bar {
+  padding: 16px 32px;
+  margin: 36px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .Introduction_bar .bar_box {
+  margin: 8px 32px 8px 0;
+}
+
+.container .Introduction > .right .image {
+  object-fit: contain;
+}
+
+.container .Philosophical {
+  display: flex;
+  gap: 16px;
+}
+
+.container .Philosophical_right,
+.container .Philosophical_left {
+  padding: 36px 32px;
+  position: relative;
+  min-height: 240px;
+}
+
+.container .Philosophical_left {
+  width: 60%;
+}
+
+.container .Philosophical_right {
+  width: 40%;
+}
+
+.container .Philosophical_left .image_container {
+  height: 90%;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  width: 220px;
+  transition: transform 2s cubic-bezier(0.13, 0.45, 0.21, 1.02);
+}
+.container .Philosophical_left .image_container .image {
+  object-fit: cover;
+}
+
+.container .Philosophical .tips_bottom {
+  color: #999999;
+  font-size: 14px;
+  position: absolute;
+  bottom: 16px;
+  left: 32px;
+}
+
+.container .Philosophical .tips_bottom a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.container .games {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.container .games .games_left,
+.container .games .games_right {
+  flex: 1;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .games .games_left .image,
+.container .games .games_right .image {
+  object-fit: cover;
+}
+
+.container .games .games_left .games_info_container,
+.container .games .games_right .games_info_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  padding: 36px 32px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.container .games .games_left .games_info_container .content_bottom,
+.container .games .games_right .games_info_container .content_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.container
+  .games
+  .games_left
+  .games_info_container
+  .content_bottom
+  .icon_group {
+  display: flex;
+  position: relative;
+}
+
+.container
+  .games
+  .games_left
+  .games_info_container
+  .content_bottom
+  .loading_bar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 62.5px;
+  transform: translate(-25%, -50%) scale(0.5);
+  overflow: hidden;
+}
+
+.container
+  .games
+  .games_left
+  .games_info_container
+  .content_bottom
+  .loading_bar::after {
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 0;
+  filter: drop-shadow(0 -500px 0 #ece5d8);
+  width: 500px;
+  height: 62.5px;
+  background: url("/loading-bar.png") no-repeat left 100%;
+  background-size: 500px 62.5px;
+  background-position-x: 0;
+}
+
+.container .games .games_left .games_info_container .tips,
+.container .games .games_right .games_info_container .tips {
+  font-size: 12px;
+}
+
+.container .config_container {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.container .config_container .config_left {
+  padding: 36px 32px;
+}
+
+.container .config_left {
+  flex: 2;
+  background: url("/sbg.png") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .config_right {
+  flex: 1;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.container .config_right img {
+  object-fit: cover;
+}
+
+.container .config_container .config_left::before {
+  box-shadow: 0 -159px 173px 71px #0c1c2c inset;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.container .config_container .config_left > * {
+  z-index: 1;
+  position: relative;
+}
+
+.container .config_container .config_left .statistic {
+  display: flex;
+  justify-content: space-between;
+  margin: 62px 0;
+}
+
+.container .config_container .config_left .statistic .statistic_item {
+  margin: 0 16px 16px 0;
+}
+
+.container .config_container .config_left .statistic .statistic_item .number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.container .config_container .config_left .tips_bottom {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #999999;
+  position: absolute;
+}
+
+.container .config_container .config_right .config_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.container .config_container .config_right .config_list .config_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .config_container .config_right .config_list .config_item .logo {
+  display: flex;
+  align-items: baseline;
+  gap: 3.2px;
+}
+
+.container .config_container .config_right .config_list .config_item .num {
+  color: #34495e80;
+}
+
+.container .content {
+  margin-top: 20px;
+  padding: 36px 32px;
+}
+
+.container .content .dec_content {
+  margin: 15px 0;
+  line-height: 2;
+  letter-spacing: 3px;
+}
+
+.card_container {
+  border: 1px solid #e3e8f7;
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  border-radius: 8px;
+}
+
+.tips {
+  opacity: 0.8;
+  font-size: 0.4rem;
+  line-height: 1;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@media screen and (max-width: 1024px) {
+  .container .Introduction > .left .title {
+    font-size: 38px;
+  }
+  .container .Introduction > .left .describe {
+    font-size: 16px;
+  }
+  .container .Introduction > .left .describe_tips {
+    font-size: 12px;
+  }
+  .container .Introduction_bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container .Introduction_bar .bar_box {
+    /* flex: 1; */
+  }
+
+  .container .games {
+    display: grid;
+    grid-template-columns: repeat(1，1fr);
+  }
+
+  .container .Philosophical {
+    flex-wrap: wrap;
+  }
+
+  .container .Philosophical_right,
+  .container .Philosophical_left {
+    width: 100%;
+  }
+
+  .container .config_container {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .container .config_container .config_left,
+  .container .config_container .config_right {
+    flex: 100%;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .container .games .games_left,
+  .container .games .games_right {
+    min-height: 250px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container .Philosophical_left .image_container {
+    width: 150px;
+  }
+  .container .games .games_left,
+  .container .games .games_right {
+    min-height: 200px;
+  }
+  .container .Introduction > .right {
+    display: none;
+  }
+}

@@ -1,0 +1,61 @@
+.item {
+  box-shadow: 0 0 10px rgba(116, 116, 116, 0.08);
+  border: 1px solid rgba(116, 116, 116, 0.08);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.item h6 {
+  font-size: 0.65rem;
+  color: #dcd5d5;
+}
+
+.item .num {
+  line-height: 1.5;
+  font-size: max(1.5rem, 3vw);
+  font-weight: 700;
+}
+
+.num {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  font-variant: tabular-nums;
+  background: linear-gradient(135deg, #0000 0, #97dbf2 25%, #97dbf2 75%, #0000)
+    no-repeat 0/400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #97dbf2;
+  background-clip: text;
+  cursor: pointer;
+  animation: perspective-reverse 0.5s ease-out forwards,
+    numbg-reverse 0.7s ease-out forwards;
+}
+
+.num:hover {
+  animation: perspective-hover 0.5s ease-in forwards,
+    numbg-hover 0.7s ease-in forwards;
+}
+
+@keyframes perspective-hover {
+  0% {
+    transform: perspective(1600px) rotateX(0) rotateY(0) translateZ(0);
+    background-position: 200% 100%;
+  }
+  50% {
+    transform: perspective(1600px) rotateX(5deg) rotateY(5deg) translateZ(50px);
+  }
+
+  100% {
+    transform: perspective(1600px) rotateX(0) rotateY(0) translateZ(100px);
+    background-position: 50% 100%;
+  }
+}
+
+@keyframes numbg-hover {
+  0% {
+    background-position: 200% 100%;
+  }
+  100% {
+    background-position: 50% 100%;
+  }
+}

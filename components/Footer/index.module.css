@@ -1,0 +1,71 @@
+.container {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 54px;
+}
+
+.icon a {
+  width: 32px;
+  height: 32px;
+  background: #363636;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.info_container {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.github_badges {
+  line-height: 13px;
+  text-align: center;
+}
+
+.github_badges .github_badge {
+  display: inline-block;
+  margin: 5px;
+  color: #fff;
+  line-height: 14px;
+}
+
+.github_badges .github_badge .badge_subject {
+  display: inline-block;
+  background-color: #4d4d4d;
+  padding: 3px 4px;
+  border-radius: 3px 0 0 3px;
+}
+
+.github_badges .github_badge .badge_value {
+  display: inline-block;
+  padding: 3px 4px;
+  border-radius: 0 3px 3px 0;
+  color: inherit;
+}
+
+.github_badge .bg_red {
+  background-color: #e05d44;
+}
+.github_badge .bg_orange {
+  background-color: orange;
+}
+.github_badge .bg_green {
+  background-color: #4dc820;
+}
+.github_badge .bg_blue {
+  background-color: #007ec6;
+}
+.github_badge .bg_gray {
+  background-color: #4a708b;
+}

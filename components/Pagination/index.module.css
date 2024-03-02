@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 10px 0;
+  gap: 10px;
+}
+
+.container span,
+.container a {
+  display: flex;
+  min-width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: #eee;
+  box-shadow: 0 8px 12px -3px #409eff23;
+  cursor: pointer;
+}
+.container .active {
+  background-color: rgba(0, 162, 255, 0.701);
+  color: #fff;
+}
+.container .d {
+  pointer-events: none;
+  cursor: not-allowed; /* 可选：将鼠标光标设置为不允许点击的样式 */
+}

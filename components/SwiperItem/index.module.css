@@ -1,0 +1,34 @@
+.ItemContainer {
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ItemContainer .image_container {
+  display: block;
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.ItemContainer .image_container .Image {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1024px) {
+  .ItemContainer .image_container {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ItemContainer .image_container {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ItemContainer .image_container {
+    height: 192px;
+  }
+}

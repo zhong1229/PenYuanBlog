@@ -1,0 +1,75 @@
+@import url("https://at.alicdn.com/t/c/font_4431239_w9kyyvvz94h.css");
+@import url("https://fonts.font.im/css?family=Indie+Flower|Poppins");
+
+:root {
+  --white-color: #fff;
+  --dark-color: #222;
+  ---body-bg-color: #f5f6f7;
+  --section-bg-color: #202834;
+  ---navigation-item-hover-color: #3b5378;
+
+  --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 5px 25px rgb(000 20%);
+
+  --scroll-bar-color: #fff;
+  --scroll-thumb-color: #282f4e;
+  --scroll-thumb-hover-color: #454f6b;
+
+  --font-size: 0.65rem;
+  --s-bg: hsl(0deg 0% 100% / 4%);
+}
+
+.line-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.container {
+  min-height: calc(100vh - 177px);
+  padding-top: 88px;
+}
+
+.wrapper {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-editor-preview-wrapper {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 1536px) {
+  .wrapper {
+    max-width: 1366px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .wrapper {
+    max-width: 475px;
+  }
+}

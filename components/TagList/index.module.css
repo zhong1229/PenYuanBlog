@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  background-color: var(---body-bg-color);
+  box-shadow: -2px 5px 15px 0 rgba(0, 0, 0, 0.24),
+    4px -16px 50px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+}
+
+.boiled {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.card_container {
+  margin: 10px 10px;
+  padding: 19px 14px;
+  display: inline-flex;
+  line-height: 0;
+  font-size: 0.6rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12);
+  color: #fff;
+}
+
+.card_container:hover {
+  color: #fff;
+  background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .boiled {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .boiled {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}

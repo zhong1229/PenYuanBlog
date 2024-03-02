@@ -1,0 +1,72 @@
+.Cover_container {
+  height: 500px;
+  position: relative;
+  background: url("/tags.png") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate3d(0px, 0px, 0px);
+  box-shadow: 0 8px 16px -4px #2c2d300c;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.Cover_container .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Cover_container .mask .banner_text {
+  color: #fff;
+  overflow-wrap: break-word;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  z-index: 1;
+  padding: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.Cover_container .mask .banner_text .icons {
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+.Cover_container .mask .banner_text span::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: 0 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  opacity: 0.3;
+  vertical-align: 0.2em;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+  .Cover_container {
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Cover_container {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .Cover_container {
+    height: 192px;
+  }
+}

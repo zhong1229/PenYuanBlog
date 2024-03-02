@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: x-large;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: var(--font-size);
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:hover {
+  color: #2775b6;
+}
+
+h6 {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+}
+
+:-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background: var(--scroll-thumb-hover-color);
+}

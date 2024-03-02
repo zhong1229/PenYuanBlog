@@ -1,0 +1,51 @@
+.home,
+.subject {
+  margin-bottom: 20px;
+}
+
+.home {
+  position: relative;
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_subject {
+  padding: 2rem;
+}
+
+.titleContainer {
+  margin-bottom: 20px;
+  color: hsla(227, 10%, 71%, 05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleContainer span {
+  position: relative;
+  font-size: 14px;
+  padding-left: 1.4em;
+}
+
+.titleContainer span::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  background: #2775b6;
+  top: 10%;
+  left: 2px;
+  bottom: 10%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px -1px #2775b6;
+}
+
+.titleContainer a {
+  display: flex;
+  align-items: center;
+  font-size: 100%;
+  gap: 4px;
+  color: inherit;
+}
