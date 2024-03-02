@@ -7,17 +7,13 @@ export async function fetchGlobalConfig() {
 }
 
 export async function fetchUserConfig() {
-  const response = await fetch(HttpUrl + "/setting/userInfo", {
-    cache: "no-store",
-  });
+  const response = await fetch(HttpUrl + "/setting/userInfo");
   const UserInfo = await response.json();
   return { ...UserInfo };
 }
 
 export async function fetchStatistics() {
-  const response = await fetch(HttpUrl + "/statistics", {
-    cache: "no-store",
-  });
+  const response = await fetch(HttpUrl + "/statistics");
   const Statistics = await response.json();
   return { ...Statistics };
 }
