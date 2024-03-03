@@ -7,11 +7,8 @@ import CommentCardList from "@/components/CommentCardList";
 
 import { FiFileText, FiPackage } from "react-icons/fi";
 import Link from "next/link";
-import Banner from "@/components/Swiper";
 import { fetchGlobalConfig } from "@/lib/globalConfig";
-import { fetchBlog, fetchCarousel } from "@/lib/HomeFetch";
-import DataNull from "@/components/DataNull";
-import { findImageList } from "@/lib/ImageFetch";
+import Banner from "@/components/Banner";
 
 export async function generateMetadata(): Promise<Metadata | undefined> {
   const { blogname } = await fetchGlobalConfig();
@@ -22,13 +19,10 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
 }
 
 export default async function Home() {
-  const cData = await fetchCarousel();
-  const Post = await fetchBlog();
-  const ImageList = await findImageList();
   return (
     <>
       <section className={styles.home}>
-        <Banner List={cData} />
+        <Banner />
       </section>
       <section className={styles.subject}>
         <h5 className={styles.titleContainer}>
@@ -38,7 +32,7 @@ export default async function Home() {
             全部文章
           </Link>
         </h5>
-        {Post.length != 0 ? <HomeCardList List={Post} /> : <DataNull />}
+        <HomeCardList />
       </section>
       <section className={styles.subject}>
         {/* 精选壁纸 */}
@@ -49,11 +43,7 @@ export default async function Home() {
             全部图片
           </Link>
         </h5>
-        {ImageList.length != 0 ? (
-          <ImageCardList List={ImageList} />
-        ) : (
-          <DataNull />
-        )}
+        <ImageCardList type="0" />
       </section>
       <section className={styles.subject} style={{ display: "none" }}>
         <h5 className={`${styles.titleContainer}`}>

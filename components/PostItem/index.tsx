@@ -32,7 +32,13 @@ const PostListItem = ({ item }: { item: Article }) => {
   return (
     <div className={styles.container}>
       <div className={styles.image_container}>
-        <Image src={item.cover} alt="" fill className={styles.image} />
+        <Image
+          src={item.cover}
+          alt={item.title}
+          sizes="100"
+          fill
+          className={styles.image}
+        />
       </div>
       <div className={styles.info}>
         <Link href={`/blog/${item.id}`} className={styles.title}>

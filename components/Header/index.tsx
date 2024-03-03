@@ -113,7 +113,7 @@ const Header = (props: HeaderProps) => {
         <div className={styles.nav_bar}>
           <div className={styles.left}>
             <div className={styles.logo_Image}>
-              <Image src={props.bloglogo} alt="" fill />
+              <Image src={props.bloglogo} alt="" sizes="100" fill />
             </div>
             <div className={styles.logs_Info}>
               <Link href="/" className={styles.logo}>

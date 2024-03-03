@@ -137,6 +137,7 @@ const AboutPage = async () => {
                 }_male.png?v=1`}
                 alt={character && character.split(",")[1]}
                 fill
+                sizes="100"
                 className={styles.image}
               />
             </div>
@@ -175,7 +176,13 @@ const AboutPage = async () => {
         </div>
         <div className={styles.games}>
           <div className={`${styles.card_container} ${styles.games_left}`}>
-            <Image src={"/game1.jpg"} alt="" fill className={styles.image} />
+            <Image
+              src={"/game1.jpg"}
+              alt="原神"
+              sizes="100"
+              fill
+              className={styles.image}
+            />
             <div className={styles.games_info_container}>
               <span className={styles.tips}>爱好游戏</span>
               <div className={styles.title}>原神</div>
@@ -188,7 +195,13 @@ const AboutPage = async () => {
             </div>
           </div>
           <div className={`${styles.card_container} ${styles.games_right}`}>
-            <Image src={"/game2.png"} alt="" fill className={styles.image} />
+            <Image
+              src={"/game2.png"}
+              alt="崩坏星穹铁道"
+              sizes="100"
+              fill
+              className={styles.image}
+            />
             <div className={styles.games_info_container}>
               <span className={styles.tips}>爱好游戏</span>
               <div className={styles.title}>崩坏星穹铁道</div>
@@ -232,7 +245,7 @@ const AboutPage = async () => {
             </div>
           </div>
           <div className={styles.config_right}>
-            <Image src={"/_image.png"} alt="" fill />
+            <Image src={"/_image.png"} sizes="100" alt="" fill />
           </div>
         </div>
         <div className={`${styles.card_container} ${styles.content}`}>

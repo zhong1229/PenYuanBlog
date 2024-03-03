@@ -1,20 +1,10 @@
 import { FaBookOpen } from "react-icons/fa";
 import styles from "./page.module.css";
 import CategoryList from "@/components/CategoryList";
-import type { Metadata } from "next";
-import { fetchGlobalConfig } from "@/lib/globalConfig";
-import { FindCategoryList } from "@/lib/BlogFetch";
-import DataNull from "@/components/DataNull";
 
-export async function generateMetadata(): Promise<Metadata | undefined> {
-  const { blogname } = await fetchGlobalConfig();
-  return {
-    title: blogname + " | 分类",
-  };
-}
+export const metadata = {};
 
-const categoryPage = async () => {
-  const List = await FindCategoryList();
+const categoryPage = () => {
   return (
     <>
       {/* 封面图 */}
@@ -27,7 +17,7 @@ const categoryPage = async () => {
         </div>
       </section>
       <section className={styles.container}>
-        {List.length != 0 ? <CategoryList List={List} /> : <DataNull />}
+        <CategoryList />
       </section>
     </>
   );

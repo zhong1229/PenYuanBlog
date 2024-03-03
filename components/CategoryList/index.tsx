@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./index.module.css";
 import { FindCategoryList } from "@/lib/BlogFetch";
+import DataNull from "../DataNull";
 
 interface Category {
   id: number;
@@ -11,7 +12,13 @@ interface Category {
   articleCount: number;
 }
 
-const CategoryList = async ({ List }: { List: Category[] }) => {
+const CategoryList = async () => {
+  const List: Category[] = await FindCategoryList();
+
+  if (List.length == 0) {
+    return <DataNull />;
+  }
+
   return (
     <div className={styles.container}>
       <ul className={styles.boiled}>

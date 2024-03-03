@@ -13,7 +13,7 @@ export async function fetchUserConfig() {
 }
 
 export async function fetchStatistics() {
-  const response = await fetch(HttpUrl + "/statistics");
+  const response = await fetch(HttpUrl + "/statistics", { cache: "no-cache" });
   const Statistics = await response.json();
   return { ...Statistics };
 }

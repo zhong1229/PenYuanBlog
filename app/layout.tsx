@@ -9,32 +9,39 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { fetchGlobalConfig } from "@/lib/globalConfig";
 import ToasterContext from "@/context/ToasterContext";
+import HeaderContainer from "@/components/HeaderContainer";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata(): Promise<Metadata | undefined> {
   const { blogname, describe } = await fetchGlobalConfig();
   return {
-    title: blogname,
     description: describe,
+    generator: "Next.js",
+    applicationName: blogname,
+    referrer: "origin-when-cross-origin",
+    keywords: [blogname],
+    authors: [{ name: "鹏小渊", url: "http://blog.risingsource.top/" }],
+    creator: "鹏小渊",
+    publisher: "鹏小渊",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
   };
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { blogname, describe, bloglogo } = await fetchGlobalConfig();
   return (
     <html lang="zh-CN">
       <body className={inter.className}>
         <ToasterContext />
-        <Header
-          blogname={blogname}
-          blogsubstring={describe}
-          bloglogo={bloglogo}
-        />
+        <HeaderContainer />
         <div className="container">
           <div className="wrapper">{children}</div>
         </div>

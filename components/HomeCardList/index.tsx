@@ -1,7 +1,15 @@
+import { fetchBlog } from "@/lib/HomeFetch";
 import HomeCard, { BlogItem } from "../HomeCard";
 import styles from "./index.module.css";
+import DataNull from "../DataNull";
 
-const HomeCardList = async ({ List }: { List: BlogItem[] }) => {
+const HomeCardList = async () => {
+  const List: BlogItem[] = await fetchBlog();
+
+  if (List.length === 0) {
+    return <DataNull />;
+  }
+
   return (
     <div className={styles.CardContainer}>
       {List?.map((item) => (

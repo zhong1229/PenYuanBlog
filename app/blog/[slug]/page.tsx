@@ -90,7 +90,13 @@ const BlogContentPage = async ({ params }: { params: { slug: string } }) => {
         <div className={styles.top}>
           {!prev.message && (
             <div className={styles.left}>
-              <Image src={prev.cover} alt="" fill className={styles.image} />
+              <Image
+                src={prev.cover}
+                alt={prev.title}
+                sizes="100"
+                fill
+                className={styles.image}
+              />
               <Link href={`/blog/${prev.id}`} className={styles.left_info}>
                 <p>上一篇</p>
                 <p>{prev.title}</p>
@@ -100,7 +106,13 @@ const BlogContentPage = async ({ params }: { params: { slug: string } }) => {
 
           {!next.message && (
             <div className={styles.right}>
-              <Image src={next.cover} alt="" fill className={styles.image} />
+              <Image
+                src={next.cover}
+                alt={next.title}
+                fill
+                sizes="100"
+                className={styles.image}
+              />
               <Link href={`/blog/${next.id}`} className={styles.right_info}>
                 <p className={styles.number}>下一篇</p>
                 <p className={styles.title}>{next.title}</p>

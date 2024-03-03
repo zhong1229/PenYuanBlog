@@ -15,10 +15,11 @@ export async function generateMetadata(): Promise<Metadata | undefined> {
 
 const ImagePage = async () => {
   const List = await findImageList();
+
   return (
     <>
       <section className={styles.container}>
-        {List.length != 0 ? <ImageCardList List={List} /> : <DataNull />}
+        <ImageCardList type="1" />
       </section>
     </>
   );
