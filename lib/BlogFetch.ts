@@ -6,13 +6,8 @@ export async function FindBlogList(
   tag: string,
   sort: string
 ) {
-  const timestamp = new Date().getTime();
   const response = await fetch(
-    HttpUrl +
-      `/blog?page=${page}&cat=${cat}&tag=${tag}&sort=${sort}&timestamp=${timestamp}`,
-    {
-      cache: "no-cache",
-    }
+    HttpUrl + `/blog?page=${page}&cat=${cat}&tag=${tag}&sort=${sort}`
   );
   const PostList = await response.json();
   return { ...PostList };
@@ -26,16 +21,14 @@ export async function FindPostContent(id: string) {
 }
 
 export async function FindCategoryList() {
-  const timestamp = new Date().getTime();
-  const response = await fetch(HttpUrl + `/category?timestamp=${timestamp}`);
+  const response = await fetch(HttpUrl + "/category");
 
   const CategoryList = await response.json();
   return [...CategoryList];
 }
 
 export async function FindTagsList() {
-  const timestamp = new Date().getTime();
-  const response = await fetch(HttpUrl + `/blog/tags?timestamp=${timestamp}`);
+  const response = await fetch(HttpUrl + `/blog/tags`);
 
   const TagList = await response.json();
 
@@ -43,19 +36,13 @@ export async function FindTagsList() {
 }
 
 export async function nextArticle(id: number) {
-  const timestamp = new Date().getTime();
-  const response = await fetch(
-    HttpUrl + `/blog/${id}/next?timestamp=${timestamp}`
-  );
+  const response = await fetch(HttpUrl + `/blog/${id}/next`);
   const nextArticleContent = await response.json();
   return { ...nextArticleContent };
 }
 
 export async function previous(id: number) {
-  const timestamp = new Date().getTime();
-  const response = await fetch(
-    HttpUrl + `/blog/${id}/previous?timestamp=${timestamp}`
-  );
+  const response = await fetch(HttpUrl + `/blog/${id}/previous`);
   const previousArticleContent = await response.json();
   return { ...previousArticleContent };
 }
