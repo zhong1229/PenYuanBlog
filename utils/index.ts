@@ -28,7 +28,7 @@ function formatDaysAgo(dateString: string): string {
       month: "numeric",
       day: "numeric",
     };
-    return dateObject.toLocaleDateString(undefined, options);
+    return dateObject.toISOString().substring(0, 10);
   }
 }
 
