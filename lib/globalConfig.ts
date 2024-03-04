@@ -7,7 +7,9 @@ export async function fetchGlobalConfig() {
 }
 
 export async function fetchUserConfig() {
-  const response = await fetch(HttpUrl + "/setting/userInfo");
+  const response = await fetch(HttpUrl + "/setting/userInfo", {
+    cache: "no-cache",
+  });
   const UserInfo = await response.json();
   return { ...UserInfo };
 }
