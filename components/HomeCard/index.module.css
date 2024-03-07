@@ -102,4 +102,7 @@
   .container .content {
     width: calc(100% - 138px);
   }
+  .container .footer .mark .left {
+    display: block;
+  }
 }
